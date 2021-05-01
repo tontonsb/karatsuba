@@ -3,11 +3,10 @@
 	import Classic from './components/Classic.svelte'
 	import Karatsuba from './components/Karatsuba.svelte'
 
-	// let x = randomInteger(1000000000000000, 10000000000000000)
-	// let y = randomInteger(1000000000000000, 10000000000000000)
+	let x = randomInteger(1000000000000000, 10000000000000000)
+	let y = randomInteger(1000000000000000, 10000000000000000)
 
-	let x = randomInteger(10000000, 100000000)
-	let y = randomInteger(10000000, 100000000)
+	let cutoff = 100000000
 </script>
 
 <main>
@@ -22,6 +21,9 @@
 	<label>
 		y = <input bind:value={y} >
 	</label>
+	<label>
+		Fall back to classic for values below <input bind:value={cutoff} >
+	</label>
 
 	<div>
 		<section>
@@ -31,7 +33,7 @@
 
 		<section>
 			<h2>Karatsuba</h2>
-			<Karatsuba x={x} y={y} />
+			<Karatsuba x={x} y={y} {cutoff} />
 		</section>
 	</div>
 </main>

@@ -1,6 +1,8 @@
 <script>
+	import Classic from './Classic.svelte'
 	export let x
 	export let y
+	export let cutoff = 10000
 	
 	export let result = 0
 
@@ -14,7 +16,7 @@
 	$: xSplit = split(xString, m)
 	$: ySplit = split(yString, m)
 
-	$: result = (x > 10 && y > 10) ? z2 * Math.pow(10, 2 * m) + (z1 - z2 - z0) * Math.pow(10, m) + z0 : x * y
+	$: result = (x > cutoff && y > cutoff) ? z2 * Math.pow(10, 2 * m) + (z1 - z2 - z0) * Math.pow(10, m) + z0 : x * y
 
 	$: z0calc = display(xSplit.lower, ySplit.lower)
 	$: z1calc = display(
@@ -36,11 +38,11 @@
 	}
 
 	function display(a, b, short) {
+		if ('undefined' === typeof short)
+			short = a <= cutoff || b <= cutoff
+
 		a = a.toString()
 		b = b.toString()
-
-		if ('undefined' === typeof short)
-			short = a.length <= 1 || b.length <= 1
 
 		if (short)
 			return a + ' * ' + b
@@ -50,7 +52,7 @@
 </script>
 
 <!-- We only display if we need to do the algo -->
-{#if x >= 10 && y >= 10}
+{#if x >= cutoff && y >= cutoff}
 <pre>
 {x}
 * {y}
@@ -62,8 +64,9 @@
 {result}
 </pre>
 
-<svelte:self x={xSplit.lower} y={ySplit.lower} bind:result={z0} />
-<svelte:self x={xSplit.lower + xSplit.upper} y={ySplit.lower + ySplit.upper} bind:result={z1} />
-<svelte:self x={xSplit.upper} y={ySplit.upper} bind:result={z2} />
+<svelte:self {cutoff} x={xSplit.lower} y={ySplit.lower} bind:result={z0} />
+<svelte:self {cutoff} x={xSplit.lower + xSplit.upper} y={ySplit.lower + ySplit.upper} bind:result={z1} />
+<svelte:self {cutoff} x={xSplit.upper} y={ySplit.upper} bind:result={z2} />
+{:else}
+<Classic {x} {y} />
 {/if}
-
