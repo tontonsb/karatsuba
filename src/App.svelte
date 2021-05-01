@@ -1,10 +1,14 @@
 <script>
-	export let name;
+	import {randomInteger} from './helpers'
+
+	let x = randomInteger(1000000000000000, 10000000000000000)
+	let y = randomInteger(1000000000000000, 10000000000000000)
 </script>
 
 <main>
 	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	x = <input value={x} >
+	y = <input value={y} >
 </main>
 
 <style>
