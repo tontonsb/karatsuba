@@ -1,34 +1,60 @@
 <script>
 	import {randomInteger} from './helpers'
+	import Classic from './components/Classic.svelte'
+	import Karatsuba from './components/Karatsuba.svelte'
 
-	let x = randomInteger(1000000000000000, 10000000000000000)
-	let y = randomInteger(1000000000000000, 10000000000000000)
+	// let x = randomInteger(1000000000000000, 10000000000000000)
+	// let y = randomInteger(1000000000000000, 10000000000000000)
+
+	let x = randomInteger(10000000, 100000000)
+	let y = randomInteger(10000000, 100000000)
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	x = <input value={x} >
-	y = <input value={y} >
+	<h1>Karatsuba's algorithm</h1>
+
+	<p>In 1960 Andrei Kolmogorov said something along the lines of "To multiply two numbers you have tu multiply each digit of one by each digit of the other. There's no faster way."</p>
+	<p>"Why do you take that for granted?" thought Anatoly Karatsuba. And here's what he came up with.</p>
+
+	<label>
+		x = <input bind:value={x} >
+	</label>
+	<label>
+		y = <input bind:value={y} >
+	</label>
+
+	<div>
+		<section>
+			<h2>Classic</h2>
+			<Classic x={x} y={y} />
+		</section>
+
+		<section>
+			<h2>Karatsuba</h2>
+			<Karatsuba x={x} y={y} />
+		</section>
+	</div>
 </main>
 
 <style>
 	main {
-		text-align: center;
 		padding: 1em;
-		max-width: 240px;
+		max-width: 36rem;
 		margin: 0 auto;
 	}
 
 	h1 {
 		color: #ff3e00;
 		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
 	}
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
+	div {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+	}
+
+	section {
+		background: #f8f8fc;
 	}
 </style>
