@@ -27,13 +27,3 @@
 -----------------------
 {products.reduce((sum, p) => sum + p.product * Math.pow(10, p.padding), 0)}
 </pre>
-
-<style>
-	.comment {
-		color: #ccc;
-	}
-
-	pre {
-		text-align: right;
-	}
-</style>

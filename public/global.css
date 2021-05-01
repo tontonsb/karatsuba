@@ -61,3 +61,23 @@ button:not(:disabled):active {
 button:focus {
 	border-color: #666;
 }
+
+.comment {
+	color: #ccc;
+}
+
+pre {
+	text-align: right;
+	letter-spacing: .1em;
+}
+
+main {
+	padding: 1em;
+	max-width: 36rem;
+	margin: 0 auto;
+}
+
+h1 {
+	color: #ff3e00;
+	text-transform: uppercase;
+}

@@ -11,9 +11,9 @@
 </script>
 
 <main>
-	<h1>Karatsuba's algorithm</h1>
+	<h1>Karatsuba algorithm</h1>
 
-	<p>In 1960 Andrei Kolmogorov said something along the lines of "To multiply two numbers you have tu multiply each digit of one by each digit of the other. There's no faster way."</p>
+	<p>In 1960 Andrei Kolmogorov said something along the lines of "To multiply two numbers you have to multiply each digit of one by each digit of the other. There's no faster way."</p>
 	<p>"Why do you take that for granted?" thought Anatoly Karatsuba. And here's what he came up with.</p>
 
 	<label>
@@ -37,17 +37,6 @@
 </main>
 
 <style>
-	main {
-		padding: 1em;
-		max-width: 36rem;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-	}
-
 	div {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
