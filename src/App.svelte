@@ -45,5 +45,6 @@
 
 	section {
 		background: #f8f8fc;
+		padding: .5rem;
 	}
 </style>
