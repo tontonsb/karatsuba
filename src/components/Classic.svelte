@@ -22,8 +22,8 @@
 * {y}
 -----------------------
 {#each products as p}
-<span class=comment>{p.x}*{p.y} = </span> {p.product}{' '.repeat(p.padding)}<br>
-{/each}
------------------------
+<span class=counter/><span class=comment>{p.x}*{p.y} = </span> {p.product}{' '.repeat(p.padding)}
+{/each}<!-- prevent line break after last item
+-->-----------------------
 {products.reduce((sum, p) => sum + p.product * Math.pow(10, p.padding), 0)}
 </pre>

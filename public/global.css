@@ -72,7 +72,7 @@ pre {
 	position: relative;
 }
 
-pre span:before {
+pre .counter:before {
 	position: absolute;
 	left: 0;
 	transform: translateX(calc(2rem - 100%));
