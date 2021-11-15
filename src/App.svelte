@@ -6,7 +6,7 @@
 	let x = randomInteger(1000000000000000, 10000000000000000)
 	let y = randomInteger(1000000000000000, 10000000000000000)
 
-	let cutoff = 100000000
+	let cutoff = 10000000
 </script>
 
 <main>

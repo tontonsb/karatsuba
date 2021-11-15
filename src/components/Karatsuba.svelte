@@ -18,13 +18,14 @@
 
 	$: result = (x > cutoff && y > cutoff) ? z2 * Math.pow(10, 2 * m) + (z1 - z2 - z0) * Math.pow(10, m) + z0 : x * y
 
-	$: z0calc = display(xSplit.lower, ySplit.lower)
+	$: z0calc = display(xSplit.lower, ySplit.lower, cutoff)
 	$: z1calc = display(
 		add(xSplit.lower, xSplit.upper), 
 		add(ySplit.lower, ySplit.upper), 
-		xSplit.lower + xSplit.upper < 10 || ySplit.lower + ySplit.upper < 10
+		xSplit.lower + xSplit.upper < 10 || ySplit.lower + ySplit.upper < 10,
+		cutoff,
 	)
-	$: z2calc = display(xSplit.upper, ySplit.upper)
+	$: z2calc = display(xSplit.upper, ySplit.upper, cutoff)
 	
 	function split(str, position) {
 		return {
@@ -37,7 +38,7 @@
 		return a.toString() + ' + ' + b.toString()
 	}
 
-	function display(a, b) {
+	function display(a, b, cutoff) {
 		a = a.toString()
 		b = b.toString()
 
