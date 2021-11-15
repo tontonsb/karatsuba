@@ -69,6 +69,24 @@ button:focus {
 pre {
 	text-align: right;
 	letter-spacing: .1em;
+	position: relative;
+}
+
+pre span:before {
+	position: absolute;
+	left: 0;
+	transform: translateX(calc(2rem - 100%));
+	counter-increment: line;
+	content: counter(line);
+	display: inline-block;
+	border-right: 1px solid #ddd;
+	padding: 0 .5em;
+	margin-right: .5em;
+	color: #888
+}
+
+section {
+	counter-reset: line;
 }
 
 main {
