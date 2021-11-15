@@ -37,14 +37,11 @@
 		return a.toString() + ' + ' + b.toString()
 	}
 
-	function display(a, b, short) {
-		if ('undefined' === typeof short)
-			short = a <= cutoff || b <= cutoff
-
+	function display(a, b) {
 		a = a.toString()
 		b = b.toString()
 
-		if (short)
+		if (a <= cutoff || b <= cutoff)
 			return a + ' * ' + b
 		
 		return `karatsuba(${a}, ${b})`
