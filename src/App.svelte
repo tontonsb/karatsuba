@@ -1,7 +1,7 @@
 <script>
 	import {randomInteger} from './helpers'
-	import Classic from './package/src/Classic.svelte'
-	import Karatsuba from './package/src/Karatsuba.svelte'
+	import {Classic} from '@tontonsb/karatsuba-display'
+	import {Karatsuba} from '@tontonsb/karatsuba-display'
 
 	let x = randomInteger(1000000000000000, 10000000000000000)
 	let y = randomInteger(1000000000000000, 10000000000000000)
