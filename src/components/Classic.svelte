@@ -4,10 +4,6 @@
 
 	$: digitsX = x.toString().split('').reverse()
 	$: digitsY = y.toString().split('').reverse()
-	
-	$: lenX = digitsX.length
-	$: lenY = digitsY.length
-	$: length = Math.max(lenX, lenY)
 
 	$: products = digitsX.map((dx, i) => digitsY.map((dy, j) => ({
 		x: dx,
