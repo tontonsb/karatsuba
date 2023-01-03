@@ -28,12 +28,12 @@
 	<div>
 		<section>
 			<h2>Classic</h2>
-			<Classic x={x} y={y} />
+			<Classic {x} {y} />
 		</section>
 
 		<section>
 			<h2>Karatsuba</h2>
-			<Karatsuba x={x} y={y} {cutoff} />
+			<Karatsuba {x} {y} {cutoff} />
 		</section>
 	</div>
 </main>
