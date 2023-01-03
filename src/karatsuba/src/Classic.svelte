@@ -23,3 +23,20 @@
 -->-----------------------
 {products.reduce((sum, p) => sum + p.product * Math.pow(10, p.padding), 0)}
 </pre>
+
+<style>
+pre {
+	position: relative;
+    white-space: pre;
+	text-align: right;
+	font-family: monospace;
+}
+
+.counter::before {
+	position: absolute;
+	left: 0;
+	transform: translateX(calc(2em - 100%));
+	counter-increment: karatsuba-line;
+	content: counter(karatsuba-line);
+}
+</style>

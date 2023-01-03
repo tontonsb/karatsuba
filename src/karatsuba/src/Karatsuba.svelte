@@ -68,3 +68,11 @@
 {:else}
 <Classic {x} {y} />
 {/if}
+
+<style>
+pre {
+	text-align: right;
+	font-family: monospace;
+    white-space: pre;
+}
+</style>
