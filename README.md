@@ -4,8 +4,8 @@ A step-by-step demonstration of Karatsuba's algorithm.
 
 ## Package
 
-Package with Svelte components can be found in `src/karatsuba`. See its
-[readme](src/karatsuba/README.md) for details.
+Package with Svelte components can be found in `src/package`. See its
+[readme](src/package/README.md) for details.
 
 ## Demo
 
