@@ -6,14 +6,14 @@ steps.
 ## Installation
 
 ```
-npm install karatsuba-visualization-svelte
+npm install @tontonsb/karatsuba-display
 ```
 
 ## Usage
 
 ```svelte
 <script>
-import {Karatsuba} from 'karatsuba-visualization-svelte'
+import {Karatsuba} from '@tontonsb/karatsuba-display'
 
 // Numbers to multiply
 const x = 6561732515444972
@@ -31,7 +31,7 @@ multiplication algorithm, you can include both for comparison:
 
 ```svelte
 <script>
-import {Karatsuba, Classic} from 'karatsuba-visualization-svelte'
+import {Karatsuba, Classic} from '@tontonsb/karatsuba-display'
 
 const x = 4125652941400349
 const y = 8096998607037776

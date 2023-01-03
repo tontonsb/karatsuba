@@ -1,0 +1,33 @@
+{
+	"name": "@tontonsb/karatsuba-display",
+	"version": "0.1.0",
+	"license": "ISC",
+	"description": "Karatsuba algorithm visualization for Svelte",
+	"keywords": [
+		"karatsuba",
+		"svelte",
+		"math"
+	],
+	"author": {
+		"name" : "Juris Evertovskis",
+		"email" : "juris@glaive.pro",
+		"url" : "https://github.com/tontonsb/"
+	},
+	"homepage": "https://github.com/tontonsb/karatsuba/src/package",
+	"bugs": {
+		"url": "https://github.com/tontonsb/karatsuba/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/tontonsb/karatsuba.git",
+		"directory": "src/package"
+	},
+	"peerDependencies": {
+		"svelte": "3.x"
+	},
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	}
+}
