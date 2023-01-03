@@ -13,14 +13,14 @@
 		"email" : "juris@glaive.pro",
 		"url" : "https://github.com/tontonsb/"
 	},
-	"homepage": "https://github.com/tontonsb/karatsuba/src/package",
+	"homepage": "https://github.com/tontonsb/karatsuba/package",
 	"bugs": {
 		"url": "https://github.com/tontonsb/karatsuba/issues"
 	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/tontonsb/karatsuba.git",
-		"directory": "src/package"
+		"directory": "package"
 	},
 	"peerDependencies": {
 		"svelte": "3.x"
