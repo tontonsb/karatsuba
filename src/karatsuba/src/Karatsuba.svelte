@@ -3,7 +3,7 @@
 	export let x
 	export let y
 	export let cutoff = 10000
-	
+
 	export let result = 0
 
 	let z0, z1, z2
@@ -20,13 +20,13 @@
 
 	$: z0calc = display(xSplit.lower, ySplit.lower, cutoff)
 	$: z1calc = display(
-		add(xSplit.lower, xSplit.upper), 
-		add(ySplit.lower, ySplit.upper), 
+		add(xSplit.lower, xSplit.upper),
+		add(ySplit.lower, ySplit.upper),
 		xSplit.lower + xSplit.upper < 10 || ySplit.lower + ySplit.upper < 10,
 		cutoff,
 	)
 	$: z2calc = display(xSplit.upper, ySplit.upper, cutoff)
-	
+
 	function split(str, position) {
 		return {
 			upper: parseInt(str.substring(0, str.length-position)) || 0,
@@ -44,7 +44,7 @@
 
 		if (a <= cutoff || b <= cutoff)
 			return a + ' * ' + b
-		
+
 		return `karatsuba(${a}, ${b})`
 	}
 </script>
