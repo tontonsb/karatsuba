@@ -1,7 +1,7 @@
 <script>
 	import {randomInteger} from './helpers'
-	import {Classic} from '@tontonsb/karatsuba-display'
-	import {Karatsuba} from '@tontonsb/karatsuba-display'
+	import {Classic} from '../package'
+	import {Karatsuba} from '../package'
 
 	let x = randomInteger(1000000000000000, 10000000000000000)
 	let y = randomInteger(1000000000000000, 10000000000000000)
