@@ -45,9 +45,6 @@ const cutoff = 10000000
 
 ## Styling
 
-To make the line numbers work properly you might need to wrap the component in
-an element with a `counter-reset: karatsuba-line` CSS rule.
-
 You may style the display by targeting the following selectors:
 
 - `pre` for the whole display
@@ -62,19 +59,15 @@ Here is an example setup:
 </section>
 
 <style>
-pre {
+section > :global(pre) {
 	letter-spacing: .1em;
 }
 
-.counter::before {
+section > :global(.counter::before) {
 	border-right: 1px solid #ddd;
 	padding: 0 .5em;
 	margin-right: .5em;
 	color: #888
-}
-
-section {
-	counter-reset: karatsuba-line;
 }
 </style>
 ```

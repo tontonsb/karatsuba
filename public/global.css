@@ -77,10 +77,6 @@ pre .counter:before {
 	color: #888
 }
 
-section {
-	counter-reset: karatsuba-line;
-}
-
 main {
 	padding: 1em;
 	margin: 0 auto;

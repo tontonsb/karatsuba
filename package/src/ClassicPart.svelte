@@ -1,0 +1,42 @@
+<script>
+	export let x
+	export let y
+
+	$: digitsX = x.toString().split('').reverse()
+	$: digitsY = y.toString().split('').reverse()
+
+	$: products = digitsX.map((dx, i) => digitsY.map((dy, j) => ({
+		x: dx,
+		y: dy,
+		padding: i + j,
+		product: dx * dy,
+	}))).flat()
+</script>
+
+<pre>
+{x}
+* {y}
+-----------------------
+{#each products as p}
+<span class=counter/><span class=comment>{p.x}*{p.y} = </span> {p.product}{' '.repeat(p.padding)}
+{/each}<!-- prevent line break after last item
+-->-----------------------
+{products.reduce((sum, p) => sum + p.product * Math.pow(10, p.padding), 0)}
+</pre>
+
+<style>
+pre {
+	text-align: right;
+	font-family: monospace;
+	white-space: pre;
+	position: relative;
+}
+
+.counter::before {
+	position: absolute;
+	left: 0;
+	transform: translateX(calc(2em - 100%));
+	counter-increment: karatsuba-line;
+	content: counter(karatsuba-line);
+}
+</style>
