@@ -6,7 +6,10 @@
 </script>
 
 <div>
-	<ClassicPart {x} {y} />
+	<ClassicPart
+		x={BigInt(x)}
+		y={BigInt(y)}
+	/>
 </div>
 
 <style>

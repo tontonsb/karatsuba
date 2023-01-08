@@ -9,7 +9,12 @@
 </script>
 
 <div>
-	<KaratsubaPart {x} {y} {cutoff} bind:result />
+	<KaratsubaPart
+		x={BigInt(x)}
+		y={BigInt(y)}
+		cutoff={BigInt(cutoff)}
+		bind:result
+	/>
 </div>
 
 <style>

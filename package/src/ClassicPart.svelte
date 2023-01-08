@@ -3,6 +3,8 @@
 	export let y
 	export let link = null
 
+	export let result = 0n
+
 	$: digitsX = x.toString().split('').reverse()
 	$: digitsY = y.toString().split('').reverse()
 
@@ -10,8 +12,11 @@
 		x: dx,
 		y: dy,
 		padding: i + j,
-		product: dx * dy,
+		product: BigInt(dx * dy),
+		value: BigInt(dx * dy) * (10n ** BigInt(i+j))
 	}))).flat()
+
+	$: result = products.reduce((sum, p) => sum + p.value, 0n)
 </script>
 
 <pre id={link} >
@@ -22,7 +27,7 @@
 <span class=counter/><span class=comment>{p.x}*{p.y} = </span> {p.product}{' '.repeat(p.padding)}
 {/each}<!-- prevent line break after last item
 -->-----------------------
-{products.reduce((sum, p) => sum + p.product * Math.pow(10, p.padding), 0)}
+{result}
 </pre>
 
 <style>
