@@ -73,7 +73,7 @@
 <span class=comment>z1 = <a href="#z1-{nonce}">{z1calc}</a> - z0 - z2 = </span>{z1 - z0 - z2}{' '.repeat(m)}
 <span class=comment>z2 = <a href="#z2-{nonce}">{z2calc}</a> = </span>{z2}{' '.repeat(2 * m)}
 -----------------------
-<span class="comment">z2*10^(2m) + z1*10^m + z0 = </span>{result}
+<span class="comment">z2*10^(2*{m}) + z1*10^{m} + z0 = </span>{result}
 </pre>
 
 <svelte:self {cutoff} x={xSplit.lower} y={ySplit.lower} bind:result={z0} link="z0-{nonce}" />
