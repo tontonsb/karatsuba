@@ -43,6 +43,21 @@ const cutoff = 10000000
 <Classic {x} {y} />
 ```
 
+Integers, BigInts and strings are supported:
+
+```svelte
+<script>
+import {Karatsuba} from '@tontonsb/karatsuba-display'
+
+const x = '4125652941400349'
+const y = 8096998607037776n
+
+const cutoff = 10000000n
+</script>
+
+<Karatsuba {x} {y} {cutoff} />
+```
+
 ## Styling
 
 You may style the display by targeting the following selectors:
