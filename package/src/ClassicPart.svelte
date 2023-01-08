@@ -1,6 +1,7 @@
 <script>
 	export let x
 	export let y
+	export let link = null
 
 	$: digitsX = x.toString().split('').reverse()
 	$: digitsY = y.toString().split('').reverse()
@@ -13,7 +14,7 @@
 	}))).flat()
 </script>
 
-<pre>
+<pre id={link} >
 {x}
 * {y}
 -----------------------

@@ -48,6 +48,7 @@ const cutoff = 10000000
 You may style the display by targeting the following selectors:
 
 - `pre` for the whole display
+- `pre:target` for the active (user-selected) sub-calculation
 - `.comment` for calculation explanations on each row
 - `.counter::before` for row numbers
 
@@ -61,6 +62,10 @@ Here is an example setup:
 <style>
 section > :global(pre) {
 	letter-spacing: .1em;
+}
+
+section > :global(pre:target) {
+	border: 4px solid green;
 }
 
 section > :global(.counter::before) {
